@@ -40,10 +40,11 @@ $(document).on('ready', function () {
 			}
 		});
 		preactiveSlide.removeClass('preactivede active proactive proactivede').addClass('preactive');
-		preactiveSlide.find('video').removeProp('autoplay');
+		preactiveSlide.find('video').trigger('pause');
 		activeSlide.removeClass('preactivede preactive proactive proactivede').addClass('active');
+		activeSlide.find('video').trigger('play');
 		proactiveSlide.removeClass('preactivede preactive active proactivede').addClass('proactive');
-		proactiveSlide.find('video').removeProp('autoplay');
+		proactiveSlide.find('video').trigger('pause');
 	}
 
 	function slideLeft() {
@@ -74,11 +75,12 @@ $(document).on('ready', function () {
 			}
 		});
 		preactiveSlide.removeClass('preactivede active proactive proactivede').addClass('preactive');
-		preactiveSlide.find('video').removeProp('autoplay');
+		preactiveSlide.find('video').trigger('pause');
 
 		activeSlide.removeClass('preactivede preactive proactive proactivede').addClass('active');
+		activeSlide.find('video').trigger('play');
 		proactiveSlide.removeClass('preactivede preactive active proactivede').addClass('proactive');
-		proactiveSlide.find('video').removeProp('autoplay');
+		proactiveSlide.find('video').trigger('pause');
 
 	}
 	var left = $('.slider-left');
