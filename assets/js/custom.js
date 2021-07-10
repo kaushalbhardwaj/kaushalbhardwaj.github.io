@@ -86,6 +86,8 @@
 	});
 	$(document).ready(function () {
 
+		$('.lazy').lazyload();
+
 		if ($(".slider-single").hasClass("active")) {
 			debugger;
 			$(".slider-single.active").find("video").addClass('read')
