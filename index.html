@@ -344,7 +344,7 @@
                     <div class="box-body">
                       <p>
                         I'm a professional developer with more than 6 years of
-                        Android applications development experience. I have
+                        Mobile applications development experience. I have
                         developed some apps with more than 100K+ installs on the
                         play store. I have my own play store account. Not just
                         development, I will help you in understanding your users
@@ -759,6 +759,9 @@
         </button>
       </div>
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
   </body>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/wow.min.js"></script>
@@ -771,5 +774,21 @@
     $(window).on("load", function () {
       new WOW().init();
     });
+  </script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBnw3DB9sfISiylZBoMZW7WOtFdTNmcX40",
+      authDomain: "portfolio-f018c.firebaseapp.com",
+      projectId: "portfolio-f018c",
+      storageBucket: "portfolio-f018c.appspot.com",
+      messagingSenderId: "313927565637",
+      appId: "1:313927565637:web:d839206a8f9d9d95defe2c",
+      measurementId: "G-9B44Y5514Y",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
 </html>
