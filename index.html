@@ -103,14 +103,30 @@
     <section id="home">
       <div class="container">
         <div class="jumbotitle">
-          <div class="col-md-10 col-md-offset-1">
+          <div class="col-md-10 ">
             <h1 class="maintitle">We help business transform <br> their business</h1>
           </div>
          
         </div>
-        <div style="margin-bottom: 20px;">
-        
+        <div style="margin-bottom: 20px;
+        position: relative;
+        display: inline-block;">
+          <div class="VideoHead-reel-innerPlay" >
+            <svg class="VideoHead-reel-innerPlay-light" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Button-19.10.29" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group-3">
+                        <g id="button_v5-copy-2" opacity="0.7" fill="#000000">
+                            <circle id="Oval-Copy-2" fill-opacity="0" cx="99.8651685" cy="102.134831" r="63.5505618"></circle>
+                            <path d="M101,0 C156.78076,0 202,45.2192403 202,101 C202,156.78076 156.78076,202 101,202 C45.2192403,202 0,156.78076 0,101 C0,45.2192403 45.2192403,0 101,0 Z M76.0337079,62.4157303 L76.0337079,141.853933 L139.58427,102.134831 L76.0337079,62.4157303 Z" id="Oval-Copy-3" fill-opacity="0.25"></path>
+                        </g>
+                        <polygon id="Triangle-Copy-2" fill="#FFFFFF" transform="translate(107.808989, 102.134831) rotate(90.000000) translate(-107.808989, -102.134831) " points="107.808989 70.3595506 147.52809 133.910112 68.0898876 133.910112"></polygon>
+                    </g>
+                </g>
+            </svg>
+         
+        </div>
           <video style="width: 100%;" data-toggle="modal" data-target="#modal-fullscreen" id="myHTMLvideo" class="slider-single-image" loop autoplay muted>
+           
             <source src="assets/imgs/10.mp4" type="video/mp4" />
           </video>
         
@@ -187,7 +203,7 @@
             </a>
           </div>
         </div>
-     
+       
         <!-- <div class="item center">
           <div class="itemdiv">
             <a href="javascript:;" class="clientblock">
@@ -842,7 +858,8 @@
     <div class="modal-content">
     
       <div class="modal-body" style="text-align: center;">
-        <iframe width="100%" height="90%" src="https://www.youtube.com/embed/XYNXeM1Sgwc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+        <iframe id="stupidd" src="https://www.youtube.com/embed/XYNXeM1Sgwc" width="100%" height="90%"  allow="autoplay" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </div>
     
     </div>
@@ -870,9 +887,20 @@
         var vid = document.getElementById("myHTMLvideo"); 
         vid.pause();
     });
+    $("#modal-fullscreen").on("shown.bs.modal", function () {
+      debugger;
+      $('#stupidd').attr('src', 'https://www.youtube.com/embed/XYNXeM1Sgwc');
+
+      $("#stupidd")[0].src += "?autoplay=1";
+ 
+   });
+
+
+   
     $("#modal-fullscreen").on("hidden.bs.modal", function () {
     var vid = document.getElementById("myHTMLvideo"); 
     vid.play();
+    $('#stupidd').attr('src', 'https://www.youtube.com/embed/XYNXeM1Sgwc');
    });
   
 });

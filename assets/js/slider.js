@@ -135,13 +135,13 @@ $(document).on('ready', function () {
 	});
 	$('.responsiveslick2').slick({
 		dots: false,
-		infinite: true,
-		autoplay:true,
+		infinite: false,
+		autoplay:false,
 		speed: 300,
 		arrows:true,
 centerPadding: '20%',touchThreshold:100,
 		slidesToShow: 2,
-		slidesToScroll: 3,
+		slidesToScroll: 1,
 		adaptiveHeight: true,
 		prevArrow: '<button class="slide-arrow prev-arrow"></button>',
 		nextArrow: '<button class="slide-arrow next-arrow"></button>',
@@ -150,23 +150,26 @@ centerPadding: '20%',touchThreshold:100,
 				breakpoint: 1024,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: false
+					slidesToScroll: 1,
+					infinite: false,
+					dots: false,
+					arrows:true,
 				}
 			},
 			{
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 2,
-					slidesToScroll: 3
+					slidesToScroll: 1,
+					arrows:true,
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 2
+					slidesToScroll: 1,
+					arrows:true,
 				}
 			}
 

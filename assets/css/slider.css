@@ -1,4 +1,4 @@
-@keyframes heartbeat { 
+=@keyframes heartbeat { 
   0% { transform: scale(0); }
   25% { transform: scale(1.2); }
   50% { transform: scale(1); }
@@ -93,17 +93,21 @@
 }
 button.slide-arrow.next-arrow {
   right: 0px;
-  top: 77%;
-  background: white;
-  display: none!important;
+  /* top: 77%; */
+  /* background: white; */
+  /* display: none!important; */
+  width: 30px;
+  height: 30px;
 }
 
 button.slide-arrow.prev-arrow {
   left: 0px;
   z-index: 9;
-  background: white;
-  top: 77%;
-  display: none!important;
+  /* background: white; */
+  /* top: 77%; */
+  /* display: none!important; */
+  height: 30px;
+  width: 30px;
 }
 ul.bottomlinks > li {
   margin-top: 16px;
@@ -126,5 +130,30 @@ ul.bottomlinks > li > a {
   .slider-container .slider-content .slider-single {
     height: 232px;
     width: 100%;
+}
+button.slide-arrow.prev-arrow.slick-arrow:before{
+  left:10px;
+  top:8px;
+  background-size: 9px;
+}
+button.slide-arrow.next-arrow.slick-arrow:before{
+  right:10px;
+  top:8px;
+  background-size: 9px;
+  left:12px;
+}
+button.slide-arrow.prev-arrow,button.slide-arrow.next-arrow{
+  top:41%
+}
+#stupidd{
+  width: 100%;
+  height: 315px;
+}
+button.close {
+  position: absolute;
+  right: 0px;
+}
+.modal-content{
+  margin-top: 70px;
 }
 }
