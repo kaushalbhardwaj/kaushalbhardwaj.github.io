@@ -366,13 +366,16 @@ button.slide-arrow {
 }
 
 button.slide-arrow.prev-arrow {
-  left: -50px;
+  background: rgb(255 255 255 / 80%);
+  left: -14px;
   top: 50%;
+  z-index: 9;
 }
 
 button.slide-arrow.next-arrow {
-  right: -50px;
+  right: -24px;
   top: 50%;
+  background: rgb(255 255 255 / 80%);
 }
 
 button.slide-arrow.prev-arrow.slick-arrow:before {
@@ -672,18 +675,19 @@ body {
   font-size: 15px;
   line-height: 1.6;
   letter-spacing: 0.2px;
-  margin: 30px;
+  margin: 20px;
 }
 section#featured:before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url(../imgs/dots-1.png);
+  /* background-image: url(../imgs/dots-1.png); */
   background-position: 0 0;
   background-repeat: no-repeat;
   opacity: 0.6;
   border-top: 109px solid #ffffff;
+  background:white
 }
 ul.menuul li:last-child a {
   border-radius: 30px;
@@ -709,7 +713,58 @@ ul.menuul li:last-child a:hover {
   letter-spacing: 0.2px;
 }
 
+
+
+.modal-header{
+  border-bottom: none;
+}
+button.close {
+  padding: 20px;
+  color: white;
+  opacity: 1;
+}
+.modal-body{
+  padding:0px;
+}
+.modal-backdrop.fade.in {
+  background: rgba(21, 20, 26, 0.8);
+  opacity: 1;
+}
+
+@media (min-width: 1200px){
+.modal-lg {
+    width: 1200px;
+}}
+a.clientblock video {
+  width: 100%;
+}
+.slick-list{padding:0 20% 0 0 !important;}
+.responsiveslick2 video {width:100%;
+border-radius: 10px;min-height: 328px; object-fit: cover;}
+
+
+.responsiveslick2 {
+    margin-bottom: 70px;
+    margin-top: 50px;
+}
+.maintitle{
+  margin: 140px 0px;
+  font-size: 80px;
+  line-height: 90px;
+}
+.VideoHead-reel-innerPlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 43%;
+  width: 100px;
+}
 @media (max-width: 468px) {
+  .VideoHead-reel-innerPlay {
+    width: 61px;
+    top: 33%;
+}
   button.scroll-top {
     right: 25px;
   }
@@ -755,4 +810,55 @@ ul.menuul li:last-child a:hover {
   .nopad {
     padding: 0px;
   }
+  h1.maintitle {
+    font-size: 32px;
+    line-height: inherit;
+    margin: 50px 0px;
 }
+.responsiveslick2 video{
+  min-height: inherit;
+}
+.responsiveslick2{
+  margin:15px 0px 30px
+}
+.itemdiv{
+  padding:10px
+}
+}
+
+@font-face{
+  font-family:Whyte Book;src:url(../fonts/4523966.woff2) 
+  format("woff2");
+  font-style:normal;
+  font-stretch:normal;
+  font-display:swap}
+  
+  @font-face{
+      font-family:Whyte Thin;src:url(../fonts/82c30f5.woff2) format("woff2");
+      font-style:normal;
+      font-stretch:normal;
+      font-display:swap
+      }
+      @font-face{
+          font-family:Whyte Medium;src:url(../fonts/f68ea8a.woff2) format("woff2");
+          font-style:normal;
+          font-stretch:normal;
+          font-display:swap
+          }
+          @font-face{
+              font-family:Whyte Inktrap Book;src:url(../fonts/2a33d70.woff2) format("woff2");
+              font-style:normal;font-stretch:normal;font-display:swap
+              }
+              @font-face{
+                  font-family:Whyte Inktrap Medium;src:url(../fonts/36262b2.woff2) format("woff2");
+                  font-style:normal;font-stretch:normal;font-display:swap
+                  }
+                  @font-face{
+                      font-family:Whyte Inktrap Bold;src:url(../fonts/72acf0e.woff2) format("woff2");
+                      font-style:normal;font-stretch:normal;font-display:swap
+                      }
+
+
+                      body{
+                        font-family: Whyte Book;
+                      }
